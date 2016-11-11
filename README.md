@@ -204,11 +204,46 @@ namespace RandomNumber
 
 1. สร้างตัวแปร Random โดยการมีสุ่มเลข 1 หลัก (0 – 9 )
 
-1. สร้างตัวแปรชนิด integer สำหรับรับค่าจากผู้ใช้
+2. สร้างตัวแปรชนิด integer สำหรับรับค่าจากผู้ใช้
 
-1. สร้างตัวแปร boolean โดยเก็บค่าที่ได้จากการเปรียบเทียบตัวเลขในข้อ 1 และ 2
+3. สร้างตัวแปร boolean โดยเก็บค่าที่ได้จากการเปรียบเทียบตัวเลขในข้อ 1 และ 2
 
-1. ให้พิมพ์ค่าตัวแปร boolean ในข้อ 3 ออกทางหน้าจอ
+```
+using System;
+namespace RandomNumber
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random random1 = new Random();
+            int randomNumber1 = random1.Next(0, 9);
+            Console.WriteLine("1. Random 0 - 9");
+            Console.WriteLine("    Random1 = {0} ", randomNumber1);
+            Console.WriteLine("---------------------------");
+            Console.WriteLine("");
+            Console.WriteLine("2. Pleace Input First and Second");
+            Console.Write("First : ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Second : ");
+            int b = Convert.ToInt32(Console.ReadLine());
+            Random random2 = new Random();
+            int randomNumber2 = random2.Next(a, b);
+            Console.WriteLine("     Random2 = {0} ", randomNumber2);
+            Console.WriteLine("---------------------------");
+            Console.WriteLine("");
+            bool c = randomNumber1 < randomNumber2;
+            Console.WriteLine("3. Boolean Operators");
+            Console.WriteLine("     {0} < {1}", randomNumber1, randomNumber2);
+            Console.WriteLine("     {0}", c);
+        }
+    }
+}
+```
+
+4. ให้พิมพ์ค่าตัวแปร boolean ในข้อ 3 ออกทางหน้าจอ
+
+![](https://github.com/rungtip214/LAB-07/blob/master/Capture03.PNG?raw=true)
 
 
 ##การเขียนโปรแกรมด้วยตัวดำเนินการทางตรรกะ
@@ -301,6 +336,100 @@ namespace thruthTable
 5. NOR
 6. Exclusive OR
 ```
+
+```
+using System;
+namespace thruthTable
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            bool A, B,Y;
+            Console.WriteLine("      Y = A AND B");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("   A      B\t|  Y");
+            Console.WriteLine("-----------------------");
+            A = false; B = false; Y = A & B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A,B,Y);
+            A = false; B = true; Y = A & B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = false; Y = A & B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = true; Y = A & B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("");
+            Console.WriteLine("      Y = A OR B");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("   A      B\t|  Y");
+            Console.WriteLine("-----------------------");
+            A = false; B = false; Y = A | B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = false; B = true; Y = A | B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = false; Y = A | B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = true; Y = A | B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("");
+            Console.WriteLine("    Y = NOT A");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("   A   |  Y");
+            Console.WriteLine("-----------------------");
+            A = false; Y = !A;
+            Console.WriteLine(" {0} | {1}", A, Y);
+            A = false; Y = !A;
+            Console.WriteLine(" {0} | {1}", A, Y);
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("");
+            Console.WriteLine("      Y = A NAND B");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("   A      B\t|  Y");
+            Console.WriteLine("-----------------------");
+            A = false; B = false; Y = !(A & B);
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = false; B = true; Y = !(A & B);
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = false; Y = !(A & B);
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = true; Y = !(A & B);
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("");
+            Console.WriteLine("      Y = A NOR B");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("   A      B\t|  Y");
+            Console.WriteLine("-----------------------");
+            A = false; B = false; Y = !(A | B);
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = false; B = true; Y = !(A | B);
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = false; Y = !(A | B);
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = true; Y = !(A | B);
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("");
+            Console.WriteLine("   Y = A Exclusive OR B");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("   A      B\t|  Y");
+            Console.WriteLine("-----------------------");
+            A = false; B = false; Y = A ^ B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = false; B = true; Y = A ^ B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = false; Y = A ^ B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = true; Y = A ^ B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            Console.WriteLine("-----------------------");
+        }
+    }
+}
+```
+![](https://github.com/rungtip214/LAB-07/blob/master/Capture04.PNG?raw=true)
 
 
 
