@@ -527,6 +527,8 @@ public class intergerTest
 }
 ```
 
+![](https://github.com/rungtip214/LAB-07/blob/master/Capture05.PNG?raw=true)
+
 
 ##2.2.3. ชนิดข้อมูลเลขทศนิยม (Floating Point and Decimal Types)
 ตัวเลขจำนวนทศนิยม มักจะใช้ในการคำนวณทางวิทยาศาสตร์ เนื่องจากค่าในวิทยาศาสตร์ต้องการความละเอียดสูง หรือมีค่าสูงมากกว่าที่เลขจำนวนเต็มจะเก็บได้
