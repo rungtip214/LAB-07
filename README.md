@@ -145,7 +145,9 @@ namespace variableProperties
 }
 ```
 
-![]()
+![](https://github.com/rungtip214/LAB-07/blob/master/Capture01.PNG?raw=true)
+
+![](https://github.com/rungtip214/LAB-07/blob/master/Capture02.PNG?raw=true)
 **หมายเหตุ**
  
 ชนิดข้อมูล ```bool``` เก็บข้อมูลได้เฉพาะ ```true``` และ ```false``` ไม่ต้องหา ```MinValue``` และ ```MaxValue```
