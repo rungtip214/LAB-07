@@ -585,7 +585,86 @@ Mars |	227,940,000 km
 Jupiter |	778,330,000 km		
 Uranus |	2,873,550,000 km		
 Neptune |	4,501,000,000 km		
-Pluto |	5,945,900,000 km		
+Pluto |	5,945,900,000 km
+
+```
+using System;
+namespace variableProperties
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            const double lightSpeed = 186000d;   // miles per second
+            Console.WriteLine("Light speed = {0} Mile Per second", lightSpeed);
+            const double mileTokm = 1.609344;
+            Console.WriteLine("Light speed = {0} km Per second", lightSpeed * mileTokm);
+            Console.WriteLine("---------------------------------------------------------");
+            Console.WriteLine("");
+            const double au = 93000000d;
+            const double SunToMercuryDistance = 57910000 / mileTokm;  // miles
+            Console.WriteLine("             Mercury");
+            Console.WriteLine("SunToMercuryDistance = {0} A.U.", SunToMercuryDistance / au);
+            double SunToMercuryTimeOfLight = SunToMercuryDistance / lightSpeed;  // miles
+            Console.WriteLine("SunToMercuryTimeOfLight = {0} minutes", SunToMercuryTimeOfLight / 60d);
+            Console.WriteLine("---------------------------------------------------------");
+            Console.WriteLine("");
+            const double SunToVenusDistance = 108200000 / mileTokm;  // miles
+            Console.WriteLine("             Venus");
+            Console.WriteLine("SunToVenusDistance = {0} A.U.", SunToVenusDistance / au);
+            double SunToVenusTimeOfLight = SunToVenusDistance / lightSpeed;  // miles
+            Console.WriteLine("SunToMercuryTimeOfLight = {0} minutes", SunToVenusTimeOfLight / 60d);
+            Console.WriteLine("---------------------------------------------------------");
+            Console.WriteLine("");
+            const double SunToEarthDistance = 149600000 / mileTokm;  // miles
+            Console.WriteLine("             Earth");
+            Console.WriteLine("SunToEarthDistance = {0} A.U.", SunToEarthDistance / au);
+            double SunToEarthTimeOfLight = SunToEarthDistance / lightSpeed;  // miles
+            Console.WriteLine("SunToEarthTimeOfLight = {0} minutes", SunToEarthTimeOfLight / 60d);
+            Console.WriteLine("---------------------------------------------------------");
+            Console.WriteLine("");
+            const double SunToMarsDistance = 227940000 / mileTokm;  // miles
+            Console.WriteLine("             Mars");
+            Console.WriteLine("SunToMarsDistance = {0} A.U.", SunToMarsDistance / au);
+            double SunToMarsTimeOfLight = SunToMarsDistance / lightSpeed;  // miles
+            Console.WriteLine("SunToMarsTimeOfLight = {0} minutes", SunToMarsTimeOfLight / 60d);
+            Console.WriteLine("---------------------------------------------------------");
+            Console.WriteLine("");
+            const double SunToJupiterDistance = 778330000 / mileTokm;  // miles
+            Console.WriteLine("             Jupiter");
+            Console.WriteLine("SunToJupiterDistance = {0} A.U.", SunToJupiterDistance / au);
+            double SunToJupiterTimeOfLight = SunToJupiterDistance / lightSpeed;  // miles
+            Console.WriteLine("SunToJupiterTimeOfLight = {0} minutes", SunToJupiterTimeOfLight / 60d);
+            Console.WriteLine("---------------------------------------------------------");
+            Console.WriteLine("");
+            const double SunToUranusDistance = 2873550000 / mileTokm;  // miles
+            Console.WriteLine("             Uranus");
+            Console.WriteLine("SunToUranusDistance = {0} A.U.", SunToUranusDistance / au);
+            double SunToUranusTimeOfLight = SunToJupiterDistance / lightSpeed;  // miles
+            Console.WriteLine("SunToUranusTimeOfLight = {0} minutes", SunToUranusTimeOfLight / 60d);
+            Console.WriteLine("---------------------------------------------------------");
+            Console.WriteLine("");
+            const double SunToNeptuneDistance = 4501000000 / mileTokm;  // miles
+            Console.WriteLine("             Neptune");
+            Console.WriteLine("SunToNeptuneDistance = {0} A.U.", SunToNeptuneDistance / au);
+            double SunToNeptuneTimeOfLight = SunToNeptuneDistance / lightSpeed;  // miles
+            Console.WriteLine("SunToNeptuneTimeOfLight = {0} minutes", SunToNeptuneTimeOfLight / 60d);
+            Console.WriteLine("---------------------------------------------------------");
+            Console.WriteLine("");
+            const double SunToPlutoDistance = 5945900000 / mileTokm;  // miles
+            Console.WriteLine("             Pluto");
+            Console.WriteLine("SunToPlutoDistance = {0} A.U.", SunToPlutoDistance / au);
+            double SunToPlutoTimeOfLight = SunToPlutoDistance / lightSpeed;  // miles
+            Console.WriteLine("SunToPlutoTimeOfLight = {0} minutes", SunToPlutoTimeOfLight / 60d);
+            Console.WriteLine("---------------------------------------------------------");
+            Console.WriteLine("");
+
+        }
+    }
+}
+```
+
+![](https://github.com/rungtip214/LAB-07/blob/master/Capture06.PNG?raw=true)
 
 ##คลาส Math 
 ในภาษา C# มีคลาสที่เป็นตัวช่วยคำนวณทางคณิตศาสตร์ ที่ช่วยให้เราสามารถคำนวณฟังก์ชันพื้นฐานได้ อย่างรวดเร็ว ไม่ต้องพัฒนาโปรแกรมเพิ่มเติมด้วยเอง นั่นคือคลาส Math  ฟังก์ชันทางคณิตศาสตร์ที่ใช้บ่อยๆ สามารถดูรายละเอียดทั้งหมดได้จาก 
